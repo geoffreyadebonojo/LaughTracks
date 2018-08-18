@@ -1,7 +1,7 @@
 
 These are all the things I want to tell you about myself, so that you get as clear a picture of my capabilities as possible. This is because I crave learning in a way that surprises me constantly, and I am committed to pushing myself. I’ll never have a chance like this again!
 
-I have been reaching out to other students in hopes of sparking up a collaboration with them, and this process has led me to an assessment of myself and my abilities. I know enough to be in awe already of the work in front of me. I’ve browsed the projects and lessons, especially black friday, and I think I could do it. It might take me a week, but looking at the spec sheet and some of the requirements I believe I have most of the skills I need.
+I have been reaching out to other students in hopes of sparking up a collaboration with them, and this process has led me to an assessment of myself and my abilities. I know enough to be in awe already of the work in front of me. 
 
 Below are a list of things I’ve reflected on which I’ve done and which I’ve not done.
 (If you have a Khan Academy account I can send you a link to my projects.)
