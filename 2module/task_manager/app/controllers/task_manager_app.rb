@@ -36,11 +36,11 @@ class TaskManagerApp < Sinatra::Base
     erb :edit
   end
 
-  set :method_override, true # this allows us to use _method in the form
-  ...
+  set :method_override, true  
+  
   put '/tasks/:id' do |id|
     Task.update(id.to_i, params[:task])
     redirect "/tasks/#{id}"
-  end 
+  end
 
 end
