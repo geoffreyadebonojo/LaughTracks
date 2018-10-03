@@ -1,0 +1,31 @@
+body {
+  color: #2B4162;
+  background: #30C5FF;
+}
+
+h1 {
+display: flex;
+justify-content: space-around;
+  color: green;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+display: flex;
+justify-content: space-around;
+text-decoration: underline;
+}
+
+a {
+display: flex;
+justify-content: space-around;
+}
+
+p {
+display: flex;
+justify-content: space-around;
+font-family: "Times New Roman", Times, serif;
+}
