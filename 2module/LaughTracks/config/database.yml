@@ -1,13 +1,13 @@
 # specify which database and adapter to use for which environment
 
 development:
-  adapter: sqlite3
-  database: db/set-list-development
+  adapter: postgresql
+  database: laugh-tracks-development
 
 test:
-  adapter: sqlite3
-  database: db/set-list-test
+  adapter: postgresql
+  database: laugh-tracks-test
 
 production:
-  adapter: sqlite3
-  database: db/set-list-production
+  adapter: postgresql
+  database: laugh-tracks-production

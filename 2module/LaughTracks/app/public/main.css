@@ -5,12 +5,13 @@ body {
 
 h1 {
 display: flex;
-justify-content: space-around;
-  color: green;
+justify-content: left;
+
+color: grey;
 }
 
 h2 {
-  font-size: 16px;
+font-size: 16px;
 }
 
 h3 {
@@ -29,3 +30,5 @@ display: flex;
 justify-content: space-around;
 font-family: "Times New Roman", Times, serif;
 }
+
+

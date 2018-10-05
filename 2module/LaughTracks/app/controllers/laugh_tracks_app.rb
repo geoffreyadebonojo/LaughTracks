@@ -12,4 +12,8 @@ class  LaughTracks < Sinatra::Base
     erb :new
   end
 
+  get '/stories' do
+    erb :stories
+  end
+
 end
