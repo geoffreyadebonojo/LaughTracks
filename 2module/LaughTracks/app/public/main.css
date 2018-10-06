@@ -112,11 +112,6 @@ padding: 20px;
 background: aliceblue;
 }
 
-#comedian{
-display: flex;
-grid-template: 3fr 1fr 1fr;
-top: 100px;
-}
 
 #comedian-name:hover{
 background-color: yellow;

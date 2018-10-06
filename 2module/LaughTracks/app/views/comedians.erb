@@ -67,16 +67,34 @@
 
 
 
-  <div class="container" id="all-comedians">
+
+  <table class="table">
+
+      
 
     <% @comedians.each do |comedian|%>
       <div class="row" id="comedian">
-        <div class="col">
-          <span id="comedian-name"><%= comedian[:name] %></span>
-          <span id="comedian-age"><%=comedian[:age]%></span>
-          <span id="comedian-city"><%= comedian[:city] %></span>
-          <span id="comedian-specials"><%= comedian[:specials]  %></span>
+      <div class="container">
+          
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo<%="#{comedian.id}"%>"> 
+            <%= comedian.name %>
+          </button>
+          
+          <div id="demo<%="#{comedian.id}" %>" class="collapse">
+          
+          <div class="col text-center">
+            <span id="comedian-age"><%= comedian.age %></span>
+          </div>
+          <div class="col text-center">
+            <span id="comedian-city"><%= comedian.city %></span>
+          </div>
+          <div class="col text-center">
+            <span id="comedian-specials"><%= comedian.specials.first.name  %></span>
+          </div>
+
+          </div>
         <% end %>
+        </div>
       </span>
     </div>
   </div>

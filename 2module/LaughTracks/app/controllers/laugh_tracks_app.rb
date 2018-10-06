@@ -5,17 +5,7 @@ class  LaughTracks < Sinatra::Base
 
   get '/comedians' do
     @comedians = Comedian.all
-    binding.pry
-    
-    # @special1 = {name: "Killin' Them Softly", image_url: "nil"}
-
-    
-
-    # @comedian1 = {name: "Dave Chappelle", age: 45, city: "Washington DC", specials: [@special1]}
-    # @comedian2 = {name: "Bill Burr", age: 51, city: "Boston"}
-    # @comedians = [@comedian1, @comedian2]
-
-
+    # binding.pry
     erb :comedians
   end
 
