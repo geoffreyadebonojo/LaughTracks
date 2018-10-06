@@ -1,10 +1,10 @@
+# require '../models/comedian'
+
 class  LaughTracks < Sinatra::Base
 
-  get '/' do
-    erb :dashboard
-  end
 
   get '/comedians' do
+    @comedians = Comedian.all
     erb :comedians
   end
 
@@ -12,8 +12,5 @@ class  LaughTracks < Sinatra::Base
     erb :new
   end
 
-  get '/stories' do
-    erb :stories
-  end
 
 end

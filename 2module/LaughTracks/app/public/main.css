@@ -1,6 +1,8 @@
+
+
 body {
   color: #2B4162;
-  background: #30C5FF;
+  background: black;
 }
 
 h1 {
@@ -31,4 +33,22 @@ justify-content: space-around;
 font-family: "Times New Roman", Times, serif;
 }
 
+#comedian-1 {
+font-size: 50px;
+}
 
+#statistics-box {
+background-color: lightgrey;
+border-radius: 12px;;
+}
+
+#statistics-header {
+padding: 20px;
+font-size: 35px;
+}
+
+.page-title {
+padding: 20px;
+font-size: 50px;
+color: whitesmoke;
+}
