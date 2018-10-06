@@ -1,8 +1,72 @@
   <div class="container">
+	  <div class="row">
+		<div class="col text-center">
+			<a class="page-title" href="#">Comedians</a>
+		</div>
+		<br>
+		<br>
+	  </div>
+	</div>
+	  
+	<div class="container" id="statistics-box">
+	  <div class="row">
+		<div class="col text-center" id="statistics-header">
+		  Statistics
+		</div>
+	  </div>
+	  <div class="row" id="info">
+		<div class="col text-center">
+			<b>avg special runtime</b>
+		</div>
+		<div class="col text-center">
+		  <b>total tv specials</b>
+		</div>
+		<div class="col text-center">
+		  <b>average age</b>
+		</div>
+		<div class="col text-center">
+		  <b>cities</b>
+		</div>
+	  </div>
+	  
+	  <div class="row" id="info">
+      <div class="col text-center" id="average-length">
+        58 minutes
+      </div>
+
+      <div class="col text-center"  id="total-specials">
+        19
+      </div>
+
+      <div class="col text-center"  id="average-age">
+        39
+      </div>
+
+      <div class="col text-center">
+        <div class="container" id="cities-list">
+          <div class="row">
+            <div class="col text-center">LA</div>
+            <div class="col text-center">Chicago</div>
+            <div class="col text-center">NY</div>
+          </div>
+            <div class="row">
+            <div class="col text-center">Boston</div>
+            <div class="col text-center">Denver</div>
+          </div>
+        </div>
+		  </div>
+    <!--ROW -->
+	  </div>
+	</div>
+  <div class="container">
     <div class="row" id="comedian-1">
       <div class="col">
-        <%= @comedians.first.name %>
+        <% @comedians.each do |comedian|%>
+        <div id="comedian-name"><%= comedian[:name] %></div>
+        <div id="comedian-age"><%=comedian[:age]%></div>
+        <div id="comedian-city"><%= comedian[:city] %></div>
+        <div id="comedian-specials"></div>
+        <% end %>
       </div>
     </div>
   </div>
-	</div>

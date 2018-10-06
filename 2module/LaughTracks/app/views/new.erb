@@ -1,15 +1,18 @@
-<h2>Story 8:</br> 
-As a visitor</br>
-When I visit `/comedians`</br>
-Then I see a form to input a new comedian into the database
-Including fields for 
-<ul> 
-  <li>name</li>
-  <li>age</li>
-  <li>city</li>
-</ul>
-When the form is successfully submitted and saved,</br>
-Then I am redirected to `/comedians`</br>
-And I see the new comedian's data on the page.
-</h2>
 
+<!-- action="the path defined in the controller"-->
+<div class="container" id="new-comedian-form">
+  <form class="new-comedian" action="/comedians" method="POST">
+  <!-- we want to use the hash 'comedian' so we know what wthe information should be attached to -->
+    <div id="form-header">New Comedian</div>
+    <div id="new-name-field">
+      Name: <input type="text" name="comedian[name]" placeholder="Name">
+    </div>
+    <div id="new-age-field">
+      Age: <input type="text" name="comedian[age]" placeholder="Age">
+    </div>
+    <div id="new-city-field">
+      City: <input type="text" name="comedian[city]" placeholder="City">
+    </div>
+    <input id="new-button" type="#" value="Create Comedian">
+  </form>
+</div>

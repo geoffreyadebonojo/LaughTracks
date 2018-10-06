@@ -1,5 +1,3 @@
-
-
 body {
   color: #2B4162;
   background: black;
@@ -51,4 +49,58 @@ font-size: 35px;
 padding: 20px;
 font-size: 50px;
 color: whitesmoke;
+}
+
+#comedian-name{
+color: blue;
+}
+
+#comedian-age{
+color: gold;
+font-size: 10px;
+}
+
+#comedian-city{
+color: whitesmoke;
+font-size: 10px;
+}
+
+#form-header{
+display: flex;
+justify-content: center; 
+font-size: 50px;
+}
+
+#new-comedian-form{
+background-color: teal;
+width: 50%;
+justify-content: center;
+}
+
+#new-button{
+vertical-align: middle;
+color: white;
+background-color: black;
+border-radius: 20px;
+
+}
+
+#new-comedian-form{
+position: absolute;
+top: 100px;
+left: 200px;
+border-radius: 20px;
+}
+
+
+#new-name-field{
+padding: 20px;
+}
+
+#new-age-field{
+padding: 20px;
+}
+
+#new-city-field{
+padding: 20px;
 }
