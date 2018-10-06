@@ -1,28 +1,44 @@
+<a href="/" id="home-link">Home</a>
 
+
+  
 <!-- action="the path defined in the controller"-->
 <div class="container" id="new-comedian-form">
   <form class="new-comedian" action="/comedians" method="POST">
   <!-- we want to use the hash 'comedian' so we know what wthe information should be attached to -->
-  <div id="mic-head">
-    <img src="https://banner2.kisspng.com/20180410/wpe/kisspng-microphone-stand-up-comedy-comedian-comedy-club-mic-5acc3c815d9497.0835907015233342733833.jpg" alt="">
-  </div>
-    <div id="form-header">New Comedian</div>
 
-    <div class="container">
-      <div class="row" id="new-name-field">
-        <input type="text" name="comedian[name]" placeholder="Name">
+  <div class="container" id="new-comedian-entry-box">
+    <div id="form-header">New Comedian</div>
+    <div class="row">
+
+      <div class="column">
+        <img id="mic-head" src="https://banner2.kisspng.com/20180410/wpe/kisspng-microphone-stand-up-comedy-comedian-comedy-club-mic-5acc3c815d9497.0835907015233342733833.jpg" alt="mic head">
       </div>
-      <div class="row" id="new-age-field">
-        <input type="text" name="comedian[age]" placeholder="Age">
-      </div>
-      <div class="row" id="new-city-field">
-        <input type="text" name="comedian[city]" placeholder="City">
+
+      <div class="column" id="data-fields"">
+    
+        <div class="container">
+          <div class="row" id="new-name-field">
+            <input type="text" name="comedian[name]" placeholder="Name">
+          </div>
+          <div class="row" id="new-age-field">
+            <input type="text" name="comedian[age]" placeholder="Age">
+          </div>
+          <div class="row" id="new-city-field">
+            <input type="text" name="comedian[city]" placeholder="City">
+          </div>
+
+          <input id="new-button" type="#" value="Create Comedian">
+        </div>
+
       </div>
     </div>
     <!-- row -->
 
-    <input id="new-button" type="#" value="Create Comedian">
   </form>
+
+
+
 </div>
 
 

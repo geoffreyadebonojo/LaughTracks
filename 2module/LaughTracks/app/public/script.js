@@ -1,5 +1,9 @@
-//javascript
-//var dataset = [80, 100, 56, 120, 180, 30, 40, 120, 160, 200];
+
+var x = document.getElementById("comedians-page-header").innerHTML;
+
+console.log("hi there");
+
+
 var dataset = [1, 3, 3, 2, 5];
 
 var svgWidth = 500, svgHeight = 300, barPadding =5;
