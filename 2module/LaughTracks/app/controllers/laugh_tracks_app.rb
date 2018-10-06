@@ -3,6 +3,10 @@ require 'pry'
 
 class  LaughTracks < Sinatra::Base
 
+  get '/' do
+    erb :dashboard
+  end
+
   get '/comedians' do
     @comedians = Comedian.all
     # binding.pry

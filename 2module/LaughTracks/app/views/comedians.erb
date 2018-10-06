@@ -83,16 +83,23 @@
           <div id="demo<%="#{comedian.id}" %>" class="collapse">
           
           <div class="row">
-            <div class="col text-center">
-              <span id="comedian-age"><%= comedian.age %></span>
+
+            <div class="container">
+
+              <div class="col text-center">
+                <span id="comedian-age"><%= comedian.age %></span>
+              </div>
+              <div class="col text-center">
+                <span id="comedian-city"><%= comedian.city %></span>
+              </div>
+
             </div>
-            <div class="col text-center">
-              <span id="comedian-city"><%= comedian.city %></span>
-            </div>
+
+            <!-- specials thumbm -->
             <div class="col text-center">
               <% comedian.specials.each do |special|%>
                 <span id="comedian-specials">
-                  <img src="<%= special.image_url %>" alt="">
+                  <img src="<%= special.image_url %>" alt="<%= special.name %>-img">
                 </span>
               <% end %>
             </div>

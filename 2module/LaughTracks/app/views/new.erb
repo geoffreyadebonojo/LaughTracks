@@ -3,16 +3,26 @@
 <div class="container" id="new-comedian-form">
   <form class="new-comedian" action="/comedians" method="POST">
   <!-- we want to use the hash 'comedian' so we know what wthe information should be attached to -->
+  <div id="mic-head">
+    <img src="https://banner2.kisspng.com/20180410/wpe/kisspng-microphone-stand-up-comedy-comedian-comedy-club-mic-5acc3c815d9497.0835907015233342733833.jpg" alt="">
+  </div>
     <div id="form-header">New Comedian</div>
-    <div id="new-name-field">
-      Name: <input type="text" name="comedian[name]" placeholder="Name">
+
+    <div class="container">
+      <div class="row" id="new-name-field">
+        <input type="text" name="comedian[name]" placeholder="Name">
+      </div>
+      <div class="row" id="new-age-field">
+        <input type="text" name="comedian[age]" placeholder="Age">
+      </div>
+      <div class="row" id="new-city-field">
+        <input type="text" name="comedian[city]" placeholder="City">
+      </div>
     </div>
-    <div id="new-age-field">
-      Age: <input type="text" name="comedian[age]" placeholder="Age">
-    </div>
-    <div id="new-city-field">
-      City: <input type="text" name="comedian[city]" placeholder="City">
-    </div>
+    <!-- row -->
+
     <input id="new-button" type="#" value="Create Comedian">
   </form>
 </div>
+
+
