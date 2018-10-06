@@ -3,6 +3,10 @@ color: #2B4162;
 background: grey;
 }
 
+img{
+  width: 50px;
+}
+
 h1 {
 display: flex;
 justify-content: left;
@@ -116,3 +120,4 @@ background: aliceblue;
 #comedian-name:hover{
 background-color: yellow;
 }
+
