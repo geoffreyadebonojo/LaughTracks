@@ -1,6 +1,6 @@
 body {
-  color: #2B4162;
-  background: black;
+color: #2B4162;
+background: grey;
 }
 
 h1 {
@@ -40,6 +40,8 @@ background-color: lightgrey;
 border-radius: 12px;;
 }
 
+
+
 #statistics-header {
 padding: 20px;
 font-size: 35px;
@@ -50,6 +52,7 @@ padding: 20px;
 font-size: 50px;
 color: whitesmoke;
 }
+
 
 #comedian-name{
 color: blue;
@@ -103,4 +106,18 @@ padding: 20px;
 
 #new-city-field{
 padding: 20px;
+}
+
+#chart{
+background: aliceblue;
+}
+
+#comedian{
+display: flex;
+grid-template: 3fr 1fr 1fr;
+top: 100px;
+}
+
+#comedian-name:hover{
+background-color: yellow;
 }

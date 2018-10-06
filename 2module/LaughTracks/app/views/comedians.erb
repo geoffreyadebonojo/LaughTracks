@@ -58,15 +58,25 @@
     <!--ROW -->
 	  </div>
 	</div>
-  <div class="container">
-    <div class="row" id="comedian-1">
-      <div class="col">
-        <% @comedians.each do |comedian|%>
-        <div id="comedian-name"><%= comedian[:name] %></div>
-        <div id="comedian-age"><%=comedian[:age]%></div>
-        <div id="comedian-city"><%= comedian[:city] %></div>
-        <div id="comedian-specials"></div>
+
+  <!--div class="container">
+    <div class="row" id="chart">
+      <svg class="bar-chart"></svg>
+    </div>
+  </div-->
+
+
+
+  <div class="container" id="all-comedians">
+
+    <% @comedians.each do |comedian|%>
+      <div class="row" id="comedian">
+        <div class="col">
+          <span id="comedian-name"><%= comedian[:name] %></span>
+          <span id="comedian-age"><%=comedian[:age]%></span>
+          <span id="comedian-city"><%= comedian[:city] %></span>
+          <span id="comedian-specials"><%= comedian[:specials]  %></span>
         <% end %>
-      </div>
+      </span>
     </div>
   </div>
