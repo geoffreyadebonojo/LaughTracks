@@ -1,7 +1,7 @@
   <div class="container">
 	  <div class="row">
-		<div class="col text-center">
-			<a class="page-title" href="#">Comedians</a>
+		<div class="col text-center" id="comedians-page-header">
+      Comedians
 		</div>
 		<br>
 		<br>
@@ -31,27 +31,25 @@
 	  
 	  <div class="row" id="info">
       <div class="col text-center" id="average-length">
-        58 minutes
+        <%= @average_length%>
       </div>
 
       <div class="col text-center"  id="total-specials">
-        19
+        <%= @total_specials %>
       </div>
 
       <div class="col text-center"  id="average-age">
-        39
+        <%= @average_age %>
       </div>
 
       <div class="col text-center">
         <div class="container" id="cities-list">
           <div class="row">
-            <div class="col text-center">LA</div>
-            <div class="col text-center">Chicago</div>
-            <div class="col text-center">NY</div>
-          </div>
-            <div class="row">
-            <div class="col text-center">Boston</div>
-            <div class="col text-center">Denver</div>
+            <div class="col text-center">
+            <% @cities_list.each do |city| %>
+              <div class="row"><%= city %></div>
+            <% end %>
+            </div>
           </div>
         </div>
 		  </div>
@@ -65,13 +63,6 @@
     </div>
   </div-->
 
-
-
-
-  <table class="table">
-
-      
-
     <% @comedians.each do |comedian|%>
       <div class="row" id="comedian">
       <div class="container">
@@ -83,19 +74,20 @@
           <div id="demo<%="#{comedian.id}" %>" class="collapse">
           
           <div class="row">
-
-            <div class="container">
-
-              <div class="col text-center">
+            <div class="col">
+              <%= comedian.name %>
+              <div class="row text-center">
                 <span id="comedian-age"><%= comedian.age %></span>
               </div>
-              <div class="col text-center">
+
+              <div class="row text-center">
                 <span id="comedian-city"><%= comedian.city %></span>
               </div>
-
             </div>
+            <!-- end BIO row -->
 
-            <!-- specials thumbm -->
+            <!-- specials thumb -->
+            Specials
             <div class="col text-center">
               <% comedian.specials.each do |special|%>
                 <span id="comedian-specials">

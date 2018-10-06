@@ -40,19 +40,25 @@ font-family: "Times New Roman", Times, serif;
 
 #over-header{
 font-size: 100px;
+font-family: 'Montserrat', sans-serif;
+
+}
+
+#head-line{
+font-family: 'Montserrat', sans-serif;
 }
 
 
 
 
-
-#comedian-1 {
+#comedian {
 font-size: 50px;
 }
 
 #statistics-box {
 background-color: lightgrey;
-border-radius: 12px;;
+border-radius: 12px;
+padding-bottom: 50px;
 }
 
 
@@ -62,7 +68,7 @@ padding: 20px;
 font-size: 35px;
 }
 
-.page-title {
+#comedians-page-header {
 padding: 20px;
 font-size: 50px;
 color: whitesmoke;
@@ -74,6 +80,7 @@ color: blue;
 }
 
 #comedian-age{
+justify-content: center;
 color: gold;
 font-size: 10px;
 }

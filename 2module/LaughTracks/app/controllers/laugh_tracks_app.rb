@@ -10,6 +10,12 @@ class  LaughTracks < Sinatra::Base
   get '/comedians' do
     @comedians = Comedian.all
     # binding.pry
+    @average_length = 52
+    @total_specials = 14
+    @average_age = 34
+
+    @cities_list = ["Los Angeles", "New York", "Chicago"]
+
     erb :comedians
   end
 

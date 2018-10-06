@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2018_10_05_164846) do
     t.integer "comedian_id"
     t.string "image_url"
     t.integer "runtime"
+    t.string "watch_now_url"
   end
 
 end

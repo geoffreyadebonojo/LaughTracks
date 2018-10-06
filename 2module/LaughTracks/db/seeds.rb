@@ -7,7 +7,7 @@ require "database_cleaner"
 DatabaseCleaner.strategy = :truncation
 DatabaseCleaner.clean
 
-bill = Comedian.create(name: "Bill Bur", age: 50, city: "Los Angeles")
+bill = Comedian.create(name: "Bill Burr", age: 50, city: "Los Angeles")
 bill.specials.create(name: "Why Do I Do This?", image_url: "https://m.media-amazon.com/images/M/MV5BMjI3OTcxNTA1MV5BMl5BanBnXkFtZTgwNDY2MjA2MDE@._V1_.jpg", runtime: 190)
 bill.specials.create(name: "Let it Go", image_url: "https://m.media-amazon.com/images/M/MV5BMjA0ODUxODkwOV5BMl5BanBnXkFtZTgwNTMwNTA2MDE@._V1_.jpg", runtime: 40)
 
