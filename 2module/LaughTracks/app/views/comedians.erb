@@ -33,15 +33,15 @@
 	  
 	  <div class="row" id="info">
       <div class="col text-center" id="average-length">
-        <%= @average_length%>
+        average length
       </div>
 
       <div class="col text-center"  id="total-specials">
-        <%= @total_specials %>
+        <%= @specials.count %>
       </div>
 
       <div class="col text-center"  id="average-age">
-        <%= @average_age %>
+        average age
       </div>
 
       <div class="col text-center">
@@ -68,17 +68,16 @@
 
 <div class="container" id="comedian-info-tabs">
   <% @comedians.each do |comedian|%>
-    <div class="container">
+    <div class="container" id="comedian-all-rows">
       <div class="row" id="comedian-rows">
 
         <div class="col">
           <h1><%= comedian.name %></h1>
         </div>
 
-        <div class="col">
+        <div class="col-md-3">
           <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#info<%="#{comedian.id}"%>">Info</button>
-        </div>
-      
+        </div><!--button-->
         <div id="info<%="#{comedian.id}" %>" class="collapse">
           <div class="row">
             <div class="col">
@@ -95,10 +94,12 @@
           </div><!--col-->
         </div><!--info-->
 
-        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#specials<%="#{comedian.id}"%>">Specials</button>
+        <div class="col-md-4">
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#specials<%="#{comedian.id}"%>">Specials</button>
+        </div><!--button-->
 
         <div id="specials<%="#{comedian.id}" %>" class="collapse">
-          <div class="row">
+          <div class="row"><!--specials-->>
 
             <% comedian.specials.each do |special|%>
               <div class="col text-center" id="comedian-specials">

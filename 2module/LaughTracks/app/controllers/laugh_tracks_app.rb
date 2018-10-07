@@ -9,13 +9,15 @@ class  LaughTracks < Sinatra::Base
 
   get '/comedians' do
     @comedians = Comedian.all
+    @specials = Special.all
     # binding.pry
-    @average_length = 52
-    @total_specials = 14
-    @average_age = 34
+    
 
-    @cities_list = ["Los Angeles", "New York", "Chicago", "Boston", "Denver"]
+    # @cities_list = ["Los Angeles", "New York", "Chicago", "Boston", "Denver"]
+    @cities_list = ["Los Angeles"]
 
+
+    #! TODO: hook up queries to database for avg runtime, totals, etc
     erb :comedians
   end
 
