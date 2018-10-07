@@ -38,13 +38,34 @@ class  LaughTracks < Sinatra::Base
     erb :new_comedian
   end
 
+  
+  get '/specials' do
+    @comedians = Comedian.all
+    @specials = Special.all
+    
+    erb :specials
+  end
+  
   get '/specials/new' do
+    @comedians = Comedian.all
+    @specials = Special.all
+
     erb :new_special
+    # binding.pry
+  end
+
+  post '/specials' do
+    Special.create([params[:special]])
+
+    redirect '/comedians'
   end
 
   post '/comedians' do
     Comedian.create(params[:comedian])
-    binding.pry
+
+    #! IF comedian.has_special? 
+    #! redirect '/specials', where 
+
     redirect '/comedians'
   end
 end

@@ -1,0 +1,63 @@
+<p><a href="/" id="home-link">Home</a></p>
+
+
+  
+<!-- action="the path defined in the controller"-->
+<div class="container" id="new-special-form">
+  <form class="new-special" action="/specials" method="POST">
+  <!-- we want to use the hash 'special' so we know what wthe information should be attached to -->
+
+  <div class="container" id="new-special-entry-box">
+    <div id="form-header">New Special</div>
+    <div class="row">
+
+      <div class="column">
+        <img id="mic-rophone" src="https://banner2.kisspng.com/20180623/huo/kisspng-microphone-comedian-stand-up-comedy-radio-5b2ea17e9bb508.6193091215297826546378.jpg" alt="microphone">
+      </div>
+
+      <div class="column" id="data-fields">
+    
+        <div class="container">
+          
+          <div class="row">
+            <select name="comedians" size="<%= @comedians.length %>">
+              <% @comedians.each do |comedian|%>
+                <option value="volvo"><%= comedian.name %></option>
+              
+              <% end %>
+            </select>
+          </div>
+
+          <div class="row" id="new-special-name">
+            <input type="text" name="special[name]" placeholder="Name">
+          </div>
+
+          <div class="row" id="new-special-runtime">
+            <input type="text" name="special[runtime]" placeholder="Runtime">
+          </div>
+
+
+          <div class="row" id="new-special-image">
+            <input type="text" name="special[image_url]" placeholder="thumbnail image URL">
+          </div>
+
+          <div class="row" id="new-special-link">
+            <input type="text" name="special[watch_now_url]" placeholder="Watch Now URL">
+          </div>
+
+          
+          
+          <input id="new-button" type="submit" value="Create Special">
+        </div>
+
+      </div>
+    </div>
+    <!-- row -->
+
+  </form>
+
+
+
+</div>
+
+
