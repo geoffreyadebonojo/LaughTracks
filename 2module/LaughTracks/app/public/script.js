@@ -1,8 +1,8 @@
 
-// var x = document.getElementById("total-specials").innerHTML;
+var x = document.getElementById("total-specials").innerHTML;
+
 
 // console.log(x);
-
 
 var dataset = [1, 3, 3, 2, 5];
 

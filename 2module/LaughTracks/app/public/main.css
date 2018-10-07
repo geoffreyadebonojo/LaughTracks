@@ -2,6 +2,10 @@
 @import 'neon.css';
 @import 'scroll.css';
 
+*{
+  padding: 15px;
+}
+
 body {
 color: #2B4162;
 background: grey;
@@ -101,10 +105,10 @@ body {
   font-size: 60px;
 }
 .text2 {
-  font-size: 169px;
+  font-size: 10em;
 }
 .text3 {
-  font-size: 100px;
+  font-size: 5em;
 }
 
 
@@ -323,9 +327,21 @@ color: beige;
 /*  NEW SPECIAL */
 
 #mic-rophone{
-  width: 300px;
-  height: 290px;
-  margin-left: 100px;
+  width: 350px;
+  height: 400px;
+  margin-left: 90px;
   margin-top: 40px;
-  border-radius: 20px;
+  border-radius: 30px;
+}
+
+#new-special-choose-comedian{
+  font-family: 'Pacifico';
+  font-size: 30px;
+  border: navy;
+  margin: 15px;
+}
+
+#new-special-form{
+  background: teal;
+  border-radius: 50px;
 }

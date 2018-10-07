@@ -4,7 +4,7 @@ require 'pry'
 class  LaughTracks < Sinatra::Base
 
   get '/' do
-    @specials = Special.all
+    @random_special = Special.all.sample
     erb :dashboard
   end
 
@@ -51,12 +51,12 @@ class  LaughTracks < Sinatra::Base
     @specials = Special.all
 
     erb :new_special
-    # binding.pry
   end
-
+  
   post '/specials' do
-    Special.create([params[:special]])
-
+    Special.create(params[:special])
+    
+    binding.pry
     redirect '/comedians'
   end
 
