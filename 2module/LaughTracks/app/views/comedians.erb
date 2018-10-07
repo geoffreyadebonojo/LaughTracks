@@ -45,11 +45,11 @@
       </div>
 
       <div class="col text-center">
-        <div class="container" id="cities-list">
+        <div class="container">
           <div class="row">
-            <div class="col text-center">
+            <div class="col text-center" id="cities-list">
             <% @cities_list.each do |city| %>
-              <div class="row"><%= city %></div>
+              <div class="row text-center"><%= city %></div>
             <% end %>
             </div>
           </div>

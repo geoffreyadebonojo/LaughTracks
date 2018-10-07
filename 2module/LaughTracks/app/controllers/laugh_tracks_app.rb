@@ -14,7 +14,7 @@ class  LaughTracks < Sinatra::Base
     @total_specials = 14
     @average_age = 34
 
-    @cities_list = ["Los Angeles", "New York", "Chicago"]
+    @cities_list = ["Los Angeles", "New York", "Chicago", "Boston", "Denver"]
 
     erb :comedians
   end
