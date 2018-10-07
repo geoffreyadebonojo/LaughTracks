@@ -1,4 +1,4 @@
-  <a href="/" id="home-link">Home</a>
+  <p><a href="/" id="home-link">Home</a></p>
   
   <div class="container">
 	  <div class="row">
@@ -68,44 +68,50 @@
 
 <div class="container" id="comedian-info-tabs">
   <% @comedians.each do |comedian|%>
-  <div class="row" id="comedian">
     <div class="container">
-        
-      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#info<%="#{comedian.id}"%>"> 
-        <%= comedian.name %>
-      </button>
+      <div class="row" id="comedian-rows">
+
+        <div class="col">
+          <h1><%= comedian.name %></h1>
+        </div>
+
+        <div class="col">
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#info<%="#{comedian.id}"%>">Info</button>
+        </div>
+      
         <div id="info<%="#{comedian.id}" %>" class="collapse">
-        <div class="row">
-          <div class="col">
-          
-            <span class="row text-center">
-              <span id="comedian-age"><%= comedian.age %></span>
-            </span>
-
-            <span class="row text-center">
-              <span id="comedian-city"><%= comedian.city %></span>
-            </span>
-          </div>
-          
-        </div>
-      </div>
-
-      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#specials<%="#{comedian.id}"%>"> 
-        Specials
-      </button>
-        <div id="specials<%="#{comedian.id}" %>" class="collapse">
-            <% comedian.specials.each do |special|%>
-            <div class="col text-center">
-              <span id="comedian-specials">
-                <a href= "<%= special.watch_now_url %>">
-                  <img src="<%= special.image_url %>" alt="<%= special.name %>-img">
-                </a>
+          <div class="row">
+            <div class="col">
+            
+              <span class="row text-center">
+                <span id="comedian-age"><%= comedian.age %></span>
               </span>
-            <% end %>
-          </div>
-        </div>
 
-        </div>
+              <span class="row text-center">
+                <span id="comedian-city"><%= comedian.city %></span>
+              </span>
+
+            </div><!--row-->
+          </div><!--col-->
+        </div><!--info-->
+
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#specials<%="#{comedian.id}"%>">Specials</button>
+
+        <div id="specials<%="#{comedian.id}" %>" class="collapse">
+          <div class="row">
+
+            <% comedian.specials.each do |special|%>
+              <div class="col text-center" id="comedian-specials">
+                  <a href="<%= special.watch_now_url %>" >
+                    <img src="<%= special.image_url %>" alt="<%= special.name %>-img">
+                  </a>
+              </div>
+            <% end %>
+
+          </div><!--row-->
+
+        </div><!--specials-->
+
       <% end %>
       </div>
     </div>
