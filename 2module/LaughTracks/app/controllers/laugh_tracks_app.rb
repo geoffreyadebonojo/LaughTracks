@@ -1,4 +1,4 @@
-# require '../models/comedian'
+
 require 'pry'
 
 class  LaughTracks < Sinatra::Base
@@ -35,11 +35,16 @@ class  LaughTracks < Sinatra::Base
   end
 
   get '/comedians/new' do
-    erb :new
+    erb :new_comedian
+  end
+
+  get '/specials/new' do
+    erb :new_special
   end
 
   post '/comedians' do
     Comedian.create(params[:comedian])
+    binding.pry
     redirect '/comedians'
   end
 end
