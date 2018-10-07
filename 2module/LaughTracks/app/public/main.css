@@ -47,8 +47,9 @@ font-family: 'Montserrat', sans-serif;
   justify-content: left;
   padding: 20px;
   font-size: 30px;
-  color: black;
+  color:lightgrey;
 }
+
 #home-link:hover{
   color: blue;
 }
@@ -82,29 +83,45 @@ font-family: 'Pacifico'
 
 }
 
+#comedian-row{
+  padding: 50px;
+}
 
 #comedian-name{
 color: blue;
 }
 
 #comedian-age{
-justify-content: center;
-color: gold;
-font-size: 30px;
-padding-left: 20px;
-font-family: 'Montserrat', sans-serif;
+  justify-content: center;
+  color: gold;
+  font-size: 30px;
+  padding-left: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #comedian-city{
-color: whitesmoke;
-font-size: 30px;
-padding-left: 20px;
-font-family: 'Montserrat', sans-serif;
+  color: whitesmoke;
+  font-size: 30px;
+  padding-left: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-#comedian-row{
-  padding: 50px;
+#comedian-deceased{
+  color: lightblue;
+  font-size: 30px;
+  padding-left: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
+
+#comedian-disgraced{
+  color: red;
+  font-size: 30px;
+  padding-left: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
 
 
 
@@ -178,7 +195,15 @@ background: aliceblue;
 display: flex;
 height: 200;
 width:200px
+}
 
+#comedian-info-tabs{
+padding-top: 15px;
+}
+
+.btn{
+  width: 100px;
+  text-align: center;
 }
 
 /* navbar */

@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 2018_10_05_164846) do
     t.text "name"
     t.integer "age"
     t.text "city"
+    t.string "deceased?"
+    t.string "disgraced?"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

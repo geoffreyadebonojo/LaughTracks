@@ -1,4 +1,6 @@
+
   <p><a href="/" id="home-link">Home</a></p>
+  
   
   <div class="container">
 	  <div class="row">
@@ -18,7 +20,7 @@
 	  </div>
 	  <div class="row" id="info">
 		<div class="col text-center">
-			<b>avg special runtime</b>
+			<b>average special runtime</b>
 		</div>
 		<div class="col text-center">
 		  <b>total tv specials</b>
@@ -33,7 +35,7 @@
 	  
 	  <div class="row" id="info">
       <div class="col text-center" id="average-length">
-        average length
+        %num
       </div>
 
       <div class="col text-center"  id="total-specials">
@@ -41,7 +43,7 @@
       </div>
 
       <div class="col text-center"  id="average-age">
-        average age
+        %num
       </div>
 
       <div class="col text-center">
@@ -71,36 +73,56 @@
     <div class="container" id="comedian-all-rows">
       <div class="row" id="comedian-rows">
 
-        <div class="col">
+        <div class="col-md-5 offset-md-1">
           <h1><%= comedian.name %></h1>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-1">
           <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#info<%="#{comedian.id}"%>">Info</button>
         </div><!--button-->
-        <div id="info<%="#{comedian.id}" %>" class="collapse">
-          <div class="row">
-            <div class="col">
-            
-              <span class="row text-center">
-                <span id="comedian-age"><%= comedian.age %></span>
-              </span>
 
-              <span class="row text-center">
-                <span id="comedian-city"><%= comedian.city %></span>
-              </span>
-
-            </div><!--row-->
-          </div><!--col-->
-        </div><!--info-->
-
-        <div class="col-md-4">
+        <div class="col-md-1 offset-md-1">
           <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#specials<%="#{comedian.id}"%>">Specials</button>
         </div><!--button-->
 
-        <div id="specials<%="#{comedian.id}" %>" class="collapse">
-          <div class="row"><!--specials-->>
+        <!--INFO button-->
+        <div id="info<%="#{comedian.id}" %>" class="collapse">
+          <div class="row">
+            </br>
+            <div class="col">
+            
+              <div class="row text-center">
+                <span id="comedian-age">aged: <%= comedian.age %></span>
+              </div>
 
+              <div class="row text-center">
+                <span id="comedian-city">resides: <%= comedian.city %></span>
+              </div>
+
+              <div class="row text-center">
+                <span id="comedian-deceased">
+                <% if comedian.deceased? == "true" %>
+                  <%= "deceased" %>
+                <% end %>
+                </span>
+              </div>
+
+              <div class="row text-center">
+                <span id="comedian-disgraced">
+                <% if comedian.disgraced? == "true" %>
+                  <%= "disgraced"%>
+                <% end %>
+              </div>
+
+            </div><!--row-->
+          </div><!--col-->
+        </div><!--INFO button-->
+
+      
+        <!--SPECIALS button-->
+        <div id="specials<%="#{comedian.id}" %>" class="collapse">
+          <div class="row"><!--specials-->
+            <br>
             <% comedian.specials.each do |special|%>
               <div class="col text-center" id="comedian-specials">
                   <a href="<%= special.watch_now_url %>" >
@@ -110,8 +132,7 @@
             <% end %>
 
           </div><!--row-->
-
-        </div><!--specials-->
+        </div><!--SPECIALS button-->
 
       <% end %>
       </div>
