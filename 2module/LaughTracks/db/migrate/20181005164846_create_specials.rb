@@ -6,6 +6,7 @@ class CreateSpecials < ActiveRecord::Migration[5.2]
       t.string :image_url
       t.integer :runtime
       t.string :watch_now_url
+      t.string :year
     end
   end
 end

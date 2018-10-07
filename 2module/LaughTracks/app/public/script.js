@@ -1,7 +1,7 @@
 
-var x = document.getElementById("comedians-page-header").innerHTML;
+var x = document.getElementById("total-specials").innerHTML;
 
-console.log("hi there");
+console.log(x);
 
 
 var dataset = [1, 3, 3, 2, 5];

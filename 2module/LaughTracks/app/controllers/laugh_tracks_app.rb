@@ -4,6 +4,7 @@ require 'pry'
 class  LaughTracks < Sinatra::Base
 
   get '/' do
+    @specials = Special.all
     erb :dashboard
   end
 
@@ -25,4 +26,7 @@ class  LaughTracks < Sinatra::Base
     erb :new
   end
 
+  post '/comedians' do
+    # Comedian.create()
+  end
 end

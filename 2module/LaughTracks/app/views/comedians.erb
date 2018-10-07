@@ -2,7 +2,7 @@
   <p><a href="/" id="home-link">Home</a></p>
   
   
-  <div class="container">
+  <div class="container" id="comedians-container">
 	  <div class="row">
 		<div class="col text-center" id="comedians-page-header">
       Comedians
@@ -73,7 +73,11 @@
     <div class="container" id="comedian-all-rows">
       <div class="row" id="comedian-rows">
 
-        <div class="col-md-5 offset-md-1">
+        <div class="col-md-1">
+          <img class="portait" src="<%= comedian.picture_url %>" alt="">
+        </div>
+
+        <div class="col-md-5">
           <h1><%= comedian.name %></h1>
         </div>
 
@@ -92,11 +96,19 @@
             <div class="col">
             
               <div class="row text-center">
-                <span id="comedian-age">aged: <%= comedian.age %></span>
+                <% @verb = "aged" %>
+                <% if comedian.deceased? == "true"%>
+                <%  @verb = "died" %>
+                <% end %>
+                <span id="comedian-age"><%= @verb %>: <%= comedian.age %></span>
               </div>
 
               <div class="row text-center">
-                <span id="comedian-city">resides: <%= comedian.city %></span>
+                <% @verb = "resides" %>
+                <% if comedian.deceased? == "true"%>
+                <%  @verb = "resided" %>
+                <% end %>
+                <span id="comedian-city"><%= @verb %>: <%= comedian.city %></span>
               </div>
 
               <div class="row text-center">

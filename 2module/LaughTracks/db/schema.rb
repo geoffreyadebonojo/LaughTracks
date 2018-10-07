@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2018_10_05_164846) do
     t.text "city"
     t.string "deceased?"
     t.string "disgraced?"
+    t.string "picture_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,6 +32,7 @@ ActiveRecord::Schema.define(version: 2018_10_05_164846) do
     t.string "image_url"
     t.integer "runtime"
     t.string "watch_now_url"
+    t.string "year"
   end
 
 end

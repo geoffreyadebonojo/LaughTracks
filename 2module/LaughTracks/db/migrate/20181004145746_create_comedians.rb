@@ -6,7 +6,8 @@ class CreateComedians < ActiveRecord::Migration[5.2]
       t.text :city
       t.string :deceased?
       t.string :disgraced?
-
+      t.string :picture_url
+      
       t.timestamps null:false
     end
   end
