@@ -45,11 +45,117 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Montserrat', sans-serif;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Arvo:700);
+@import url(https://fonts.googleapis.com/css?family=Seaweed+Script);
+body {
+  background-color: #222;
+}
+.plate {
+  width: 410px;
+  margin: 5% auto;
+}
+.shadow {
+  color: #fff;
+  font-family: Arvo;
+  font-weight: bold;
+  text-shadow:
+    -3px -3px 0 #222,
+    3px -3px 0 #222,
+    -3px 3px 0 #222,
+    3px 3px 0 #222,
+    4px 4px 0 #fff,
+    5px 5px 0 #fff,
+    6px 6px 0 #fff,
+    7px 7px 0 #fff;
+  line-height: 0.8em;
+  letter-spacing: 0.1em;
+  transform: scaleY(0.7);
+  transform: scaleX(1.2);
+  -webkit-transform: scaleY(0.7);
+  -webkit-transform: scaleX(1.2);
+  -moz-transform: scaleY(0.7);
+  -moz-transform: scaleX(1.2);
+  margin:0;
+  text-align: center;
+}
+.script {
+  font-family: "Seaweed Script";
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+  margin:0;
+}
+.script span {
+  background-color: #222;
+  padding: 0 0.3em;
+}
+.script:before {
+  content:"";
+  display: block;
+  position: absolute;
+  z-index:-1;
+  top: 50%;
+  width: 100%;
+  border-bottom: 3px solid #fff;
+}
+.text1 {
+  font-size: 60px;
+}
+.text2 {
+  font-size: 169px;
+}
+.text3 {
+  font-size: 100px;
+}
+
+
+/* STATS PAGE */
+
+#statistics-header {
+  padding: 20px;
+  font-size: 35px;
+  font-family: 'Pacifico';
+}
+  
+#statistics-box {
+  background-color: lightgrey;
+  border-radius: 12px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  /* visibility: hidden; */
+}
+
+#cities-list{
+  padding-left: 100px;
+}
+
+
+#stats-bar-chart{
+  padding-top: 50px;
+  padding-bottom: 100px;
+  -radius: 20%;
+}
+
+
+#chart{
+  background: lightgrey;
+  border-radius: 20px
+  }
+
+
+
 /* COMEDIANS */
 
 #home-link{
   justify-content: left;
   padding: 20px;
+  font-size: 30px;
+  color:lightgrey;
+}
+
+#add-link{
+  justify-content: left;
   font-size: 30px;
   color:lightgrey;
 }
@@ -64,9 +170,9 @@ font-family: 'Montserrat', sans-serif;
 
 #comedians-page-header {
   padding: 20px;
-  font-size: 50px;
+  font-size: 111px;
   color: gold;
-  font-family: 'Pacifico'
+  font-family: 'Pacifico';
 }
 
 #comedian {
@@ -75,24 +181,16 @@ font-family: 'Montserrat', sans-serif;
 
 
 
-#statistics-box {
-  background-color: lightgrey;
-  border-radius: 12px;
-  padding-bottom: 50px;
-}
-
-#statistics-header {
-padding: 20px;
-font-size: 35px;
-}
-#cities-list{
-  padding-left: 100px;
-}
-
 .portait{
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+.special-cover{
+  padding: 20px;
+  width: 200px;
+  height: 200px;
 }
 
 #comedian-row{
@@ -171,36 +269,24 @@ color: blue;
 }
 
 
-#data-fields{
-  width: 30%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 25px;
-}
 
 #mic-head{
-  width: 190px;
-  height: 230px;
-  margin-left: 150px;
+  width: 300px;
+  height: 290px;
+  margin-left: 100px;
   margin-top: 40px;
   border-radius: 20px;
 }
 
-#new-name-field{
-padding: 20px;}
-
-#new-age-field{
-padding: 20px;
+#data-fields{
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10%;
 }
 
-#new-city-field{
-padding: 20px;
-}
-
-#chart{
-background: aliceblue;
+#new-name-field, #new-age-field,#new-city-field {
+padding: 5px;
 }
 
 #comedian-specials{
@@ -225,82 +311,13 @@ color: beige;
 
 
 
-
-@import url(https://fonts.googleapis.com/css?family=Arvo:700);
-@import url(https://fonts.googleapis.com/css?family=Seaweed+Script);
-body {
-  background-color: #222;
-}
-.plate {
-  width: 410px;
-  margin: 5% auto;
-}
-.shadow {
-  color: #fff;
-  font-family: Arvo;
-  font-weight: bold;
-  text-shadow:
-    -3px -3px 0 #222,
-    3px -3px 0 #222,
-    -3px 3px 0 #222,
-    3px 3px 0 #222,
-    4px 4px 0 #fff,
-    5px 5px 0 #fff,
-    6px 6px 0 #fff,
-    7px 7px 0 #fff;
-  line-height: 0.8em;
-  letter-spacing: 0.1em;
-  transform: scaleY(0.7);
-  transform: scaleX(1.2);
-  -webkit-transform: scaleY(0.7);
-  -webkit-transform: scaleX(1.2);
-  -moz-transform: scaleY(0.7);
-  -moz-transform: scaleX(1.2);
-  margin:0;
-  text-align: center;
-}
-.script {
-  font-family: "Seaweed Script";
-  color: #fff;
-  text-align: center;
-  font-size: 40px;
-  position: relative;
-  margin:0;
-}
-.script span {
-  background-color: #222;
-  padding: 0 0.3em;
-}
-.script:before {
-  content:"";
-  display: block;
-  position: absolute;
-  z-index:-1;
-  top: 50%;
-  width: 100%;
-  border-bottom: 3px solid #fff;
-}
-.text1 {
-  font-size: 60px;
-}
-.text2 {
-  font-size: 169px;
-}
-.text3 {
-  font-size: 100px;
-}
-
 #see-comedians-link{
   font-size: 30px;
 }
-#see-comedians-link:hover{
-  color: lightseagreen;
-}
+
 
 #add-comedians-link{
   font-size: 30px;
 }
-#see-comedians-link:hover{
-  color:lightcoral;
-}
+
 

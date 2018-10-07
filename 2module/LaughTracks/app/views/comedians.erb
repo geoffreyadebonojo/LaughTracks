@@ -11,64 +11,12 @@
 		<br>
 	  </div>
 	</div>
-	  
-	<div class="container" id="statistics-box">
-	  <div class="row">
-		<div class="col text-center" id="statistics-header">
-		  Statistics
-		</div>
-	  </div>
-	  <div class="row" id="info">
-		<div class="col text-center">
-			<b>average special runtime</b>
-		</div>
-		<div class="col text-center">
-		  <b>total tv specials</b>
-		</div>
-		<div class="col text-center">
-		  <b>average age</b>
-		</div>
-		<div class="col text-center">
-		  <b>cities</b>
-		</div>
-	  </div>
-	  
-	  <div class="row" id="info">
-      <div class="col text-center" id="average-length">
-        %num
-      </div>
-
-      <div class="col text-center"  id="total-specials">
-        <%= @specials.count %>
-      </div>
-
-      <div class="col text-center"  id="average-age">
-        %num
-      </div>
-
-      <div class="col text-center">
-        <div class="container">
-          <div class="row">
-            <div class="col text-center" id="cities-list">
-            <% @cities_list.each do |city| %>
-              <div class="row text-center"><%= city %></div>
-            <% end %>
-            </div>
-          </div>
-        </div>
-		  </div>
-    <!--ROW -->
-	  </div>
-
-    <!--div class="container">
-      <div class="row" id="chart">
-        <svg class="bar-chart"></svg>
-      </div>
-    </div-->
-
-	</div>
+	
+  
+	
 
 <div class="container" id="comedian-info-tabs">
+  
   <% @comedians.each do |comedian|%>
     <div class="container" id="comedian-all-rows">
       <div class="row" id="comedian-rows">
@@ -138,7 +86,7 @@
             <% comedian.specials.each do |special|%>
               <div class="col text-center" id="comedian-specials">
                   <a href="<%= special.watch_now_url %>" >
-                    <img src="<%= special.image_url %>" alt="<%= special.name %>-img">
+                    <img class="special-cover" src="<%= special.image_url %>" alt="<%= special.name %>-img">
                   </a>
               </div>
             <% end %>
@@ -148,6 +96,20 @@
 
       <% end %>
       </div>
+
+      <div class="row">
+        <div class="col-md-1">
+          <img class="portait" src="https://banner2.kisspng.com/20180410/wpe/kisspng-microphone-stand-up-comedy-comedian-comedy-club-mic-5acc3c815d9497.0835907015233342733833.jpg" alt="">
+        </div>
+        
+        <div class="col-md-5">
+          <a href="/comedians/new" id="add-link">Add Comedian</a>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </div>
+
+

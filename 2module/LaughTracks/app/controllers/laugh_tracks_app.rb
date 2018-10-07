@@ -8,14 +8,26 @@ class  LaughTracks < Sinatra::Base
     erb :dashboard
   end
 
+  get '/comedians/statistics' do
+    @comedians = Comedian.all
+    @specials = Special.all
+
+    # @cities_list = ["Los Angeles", "New York", "Chicago", "Boston", "Denver"]
+
+    #? Who is responsible for assembling this list?
+    cities = @comedians.map do |comedian|
+      comedian.city
+    end
+
+    @cities_list = cities.uniq
+
+    erb :statistics
+  end
+
   get '/comedians' do
     @comedians = Comedian.all
     @specials = Special.all
     # binding.pry
-    
-
-    # @cities_list = ["Los Angeles", "New York", "Chicago", "Boston", "Denver"]
-    @cities_list = ["Los Angeles"]
 
 
     #! TODO: hook up queries to database for avg runtime, totals, etc
@@ -27,6 +39,7 @@ class  LaughTracks < Sinatra::Base
   end
 
   post '/comedians' do
-    # Comedian.create()
+    Comedian.create(params[:comedian])
+    redirect '/comedians'
   end
 end
